@@ -32,3 +32,7 @@ body {
   color: white;
   font-size: 1em;
 }
+.banner .info {
+  margin-top: 15%;
+  transform: translateY(-15%);
+}
