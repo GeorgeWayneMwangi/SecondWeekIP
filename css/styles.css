@@ -41,3 +41,14 @@ body {
    color: white;
    letter-spacing: 2px;
 }
+.banner .info p {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 1px;
+}
+.banner .info a {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  color: white;
+}
