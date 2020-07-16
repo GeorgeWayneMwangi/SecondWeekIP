@@ -51,4 +51,8 @@ body {
   margin-left: 50%;
   transform: translateX(-50%);
   color: white;
+  background: #e91d43;
+  padding: 10px 20px;
+  font-size: 2em;
+  font-weight: 600;
 }
