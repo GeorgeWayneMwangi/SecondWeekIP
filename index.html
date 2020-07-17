@@ -51,12 +51,33 @@
             <div>
               <label for="CenturyDigits">CenturyDigits</label>
               <input type="number" name="CenturyDigits" id="CenturyDigits" placeholder="eg. 19 in 1999" required
+              min="0" max="20"
               >
             </div>
             <div>
               <label for="YearDigits">YearDigits</label>
-              <input type="number" name="YearDigits" id="YearDigits" placeholder="eg. 99 in 1999" required
+              <input type="number" name="YearDigits" id="YearDigits" placeholder="eg. 99 in 1999" required min="0"
+              max="99"
               >
+            </div>
+            <div>
+              <label for="Month">Month</label>
+              <input type="number" name="Month" id="Month" placeholder="eg. 4 for April" required min="1"
+              max="12"
+              >
+            </div>
+            <div>
+              <label for="Day">Day</label>
+              <input type="number" name="Day" id="Day" placeholder="eg. 12th of April" required min="1" max="31"
+              >
+            </div>
+            <div>
+              <label for="male">Male</label>
+              <input type="radio" name="gender" id="male" value="male">
+            </div>
+            <div>
+              <label for="female">Female</label>
+              <input type="radio" name="gender" id="female" value="female">
             </div>
             <button type="reset">Reset</button>
             <button type="submit">Submit</button>
