@@ -7,6 +7,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display.min.css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/scripts.js" charset="utf-8"></script>
   </head>
   <body>
     <div class="container-fluid banner">
@@ -36,5 +37,30 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+    <div class="container-fluid banner">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="navbar-brand">WHAT ARE AKAN NAMES?</div>
+          </div>
+          <div class="intro2">
+            <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born.</p>
+            <p>Find out more.<a href="https://en.wikipedia.org/wiki/Akan_names"></a></p>
+          </div>
+        <div class="col-md-6">
+          <form action="results.html" method="get">
+            <div>
+              <label for="CenturyDigits">CenturyDigits</label>
+              <input type="number" name="CenturyDigits" id="CenturyDigits" placeholder="eg. 19 in 1999" required
+              >
+            </div>
+            <div>
+              <label for="YearDigits">YearDigits</label>
+              <input type="number" name="YearDigits" id="YearDigits" placeholder="eg. 99 in 1999" required
+              >
+            </div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
