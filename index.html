@@ -37,51 +37,57 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid banner">
+    <div class="container-fluid new">
       <div class="row">
         <div class="col-md-6">
-          <div class="navbar-brand">WHAT ARE AKAN NAMES?</div>
+          <div class="card">
+            <div class="card-title">
+              <h2>WHAT ARE AKAN NAMES?</h2>
+              <div class="card-body text-center">
+                <p class="intro2">Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born.</p>
+                <p><a href="https://en.wikipedia.org/wiki/Akan_names">Find out more about Akan names here</a></p>
+              </div>
+            </div>
           </div>
-          <div class="intro2">
-            <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born.</p>
-            <p>Find out more.<a href="https://en.wikipedia.org/wiki/Akan_names"></a></p>
-          </div>
+        </div>
         <div class="col-md-6">
-          <form action="results.html" method="get">
-            <div>
+          <form name="AganNames" class="form" onsubmit="validate();">
+            <div class="form-group">
               <label for="CenturyDigits">CenturyDigits</label>
-              <input type="number" name="CenturyDigits" id="CenturyDigits" placeholder="eg. 19 in 1999" required
+              <input type="number" class="form-control" name="CenturyDigits" id="CenturyDigits" placeholder="eg. 19 in 1999" required
               min="0" max="20"
               >
-            </div>
-            <div>
-              <label for="YearDigits">YearDigits</label>
-              <input type="number" name="YearDigits" id="YearDigits" placeholder="eg. 99 in 1999" required min="0"
+          </div>
+          <div class="form-group">
+            <label for="YearDigits">YearDigits</label>
+            <input type="number" class="form-control" name="YearDigits" id="YearDigits" placeholder="eg. 99 in 1999" required min="0"
               max="99"
               >
-            </div>
-            <div>
-              <label for="Month">Month</label>
-              <input type="number" name="Month" id="Month" placeholder="eg. 4 for April" required min="1"
+          </div>
+          <div class="form-group">
+            <label for="Month">Month</label>
+            <input type="number" class="form-control" name="Month" id="Month" placeholder="eg. 4 for April" required min="1"
               max="12"
               >
-            </div>
-            <div>
+          </div>
+            <div class="form-group">
               <label for="Day">Day</label>
-              <input type="number" name="Day" id="Day" placeholder="eg. 12th of April" required min="1" max="31"
+              <input type="number" class="form-control" name="Day" id="Day" placeholder="eg. 12th of April" required min="1" max="31"
               >
             </div>
-            <div>
-              <label for="male">Male</label>
-              <input type="radio" name="gender" id="male" value="male">
+            <div class="form-check form-check-inline">
+              <label class="form-check-label" for="male">Male</label>
+              <input  type="radio" class="form-check-input" name="gender" id="male" value="male">
             </div>
-            <div>
-              <label for="female">Female</label>
-              <input type="radio" name="gender" id="female" value="female">
+            <div class="form-check form-check-inline">
+              <label class="form-check-label" for="female">Female</label>
+              <input class="form-check-input" type="radio" name="gender" id="female" value="female">
             </div>
-            <button type="reset">Reset</button>
-            <button type="submit">Submit</button>
+            <button type="submit" class="button button-primary" onclick="akanName()">Get Akan Name</button>
+            <button type="reset" class="button button-primary" onclick="reset()">Reset</button>
           </form>
         </div>
       </div>
     </div>
+  </body>
+</html>
