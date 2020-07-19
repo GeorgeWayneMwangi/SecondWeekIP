@@ -43,5 +43,4 @@ This is a web application takes a user's birthday and calculates the day of the 
 > MIT License &copy 2020 George Wayne Mwangi 
 
 ## Collaborate
-If you run into any issues or have questions, ideas or concerns,contact me at [Email](waynegeorge193@gmail.com)  or make a contribution to the code.
->>>>>>> b0dc19be62ecc75dcc2ceb5d98736d8f2e159948
+If you run into any issues or have questions, ideas or concerns,contact me at (waynegeorge193@gmail.com)  or make a contribution to the code.
