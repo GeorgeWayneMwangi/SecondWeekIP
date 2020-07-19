@@ -3,6 +3,7 @@
 #### By George Wayne Mwangi
 ## Description
 This is a web application takes a user's birthday and calculates the day of the week they were born and then depending on their gender outputs their Akan Name. The user inputs the details about their date of birth using a form created using HTML and then using JavaScript, a value  is calculated and is matched to arrays that containe the day that the user was born and the corresponding Akan name.
+Live site:https://georgewaynemwangi.github.io/SecondWeekIP/
 ## Setup/Installation Requirements
 * Create a project folder on your desktop.
 * Use git clone https://github.com/GeorgeWayneMwangi/SecondWeekIP.git on your terminal in the project folder
