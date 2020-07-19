@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Akan-Names.
 [Check it out](https://GeorgeWayneMwangi.github.io/SecondWeekIP/)
 #### Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. Here are Ghanian day name.
@@ -45,6 +44,3 @@ This is a web application takes a user's birthday and calculates the day of the 
 
 ## Collaborate
 If you run into any issues or have questions, ideas or concerns,contact me at [Email](waynegeorge193@gmail.com)  or make a contribution to the code.
-=======
-
->>>>>>> cad57925accdda513a54233afe73cfeaa63ae642
