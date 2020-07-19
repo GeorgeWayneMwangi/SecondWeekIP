@@ -6,6 +6,7 @@
     <title>Know the day you were born and your Akan name.</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display.min.css">
+    <linl href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/scripts.js" charset="utf-8"></script>
   </head>
@@ -20,10 +21,7 @@
                 <a class="nav-link" href="#">HOME</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">ABOUT</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">CONTACT</a>
+                <a class="nav-link" href="#intro2">ABOUT</a>
               </li>
             </ul>
           </nav>
@@ -33,7 +31,7 @@
           <p class="text-center">Do you want to know which day you were born?</p>
           <p class="text-center">Do what to find out your Akan name?
           </p>
-          <a href="#" class="btn btn-md text-center">GET STARTED</a>
+          <a href="#intro3" class="btn btn-md text-center">GET STARTED</a>
         </div>
       </div>
     </div>
@@ -41,19 +39,19 @@
       <div class="row">
         <div class="col-md-6">
           <div class="card">
-            <div class="card-title">
+            <di v class="card-title">
               <h2>WHAT ARE AKAN NAMES?</h2>
               <div class="card-body text-center">
-                <p class="intro2">Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born.</p>
+                <p class="intro2"><a name="intro2">Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born.</a></p>
                 <p><a href="https://en.wikipedia.org/wiki/Akan_names">Find out more about Akan names here</a></p>
               </div>
             </div>
           </div>
         </div>
         <div class="col-md-6">
-          <form name="AganNames" class="form" onsubmit="validate();">
+          <form name="AganNames" class="form"   action="" method="get" id="form-user">
             <div class="form-group">
-              <label for="CenturyDigits">CenturyDigits</label>
+              <label for="CenturyDigits"><a name="intro3">CenturyDigits</a></label>
               <input type="number" class="form-control" name="CenturyDigits" id="CenturyDigits" placeholder="eg. 19 in 1999" required
               min="0" max="20"
               >
@@ -77,14 +75,16 @@
             </div>
             <div class="form-check form-check-inline">
               <label class="form-check-label" for="male">Male</label>
-              <input  type="radio" class="form-check-input" name="gender" id="male" value="male">
+              <input  type="radio" class="form-check-input" name="gender" id="male" value="male" required>
             </div>
             <div class="form-check form-check-inline">
               <label class="form-check-label" for="female">Female</label>
-              <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+              <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+              <br>
+              <button id="button-submit" type="submit" class="button button-primary mb-2" onclick="findName()">Get Akan Name</button>
+              <button id="button-reset" type="reset" class="button button-primary mb-2" onclick="reset()">Reset</button>
+              <p id="Results"></p>
             </div>
-            <button type="submit" class="button button-primary" onclick="akanName()">Get Akan Name</button>
-            <button type="reset" class="button button-primary" onclick="reset()">Reset</button>
           </form>
         </div>
       </div>
