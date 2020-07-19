@@ -47,27 +47,26 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-6">
-          <form name="AganNames" class="form"   action="" method="get" id="form-user">
-            <div class="form-group">
-              <label for="CenturyDigits"><a name="intro3">CenturyDigits</a></label>
-              <input type="number" class="form-control" name="CenturyDigits" id="CenturyDigits" placeholder="eg. 19 in 1999" required
+          <div class="col-md-6">
+            <form name="AganNames" class="form"   action="#" method="get" id="form-user">
+              <div class="form-group">
+                <label for="CenturyDigits"><a name="intro3">CenturyDigits</a></label>
+                <input type="number" class="form-control" name="CenturyDigits" id="CenturyDigits" placeholder="eg. 19 in 1999" required
               min="0" max="20"
               >
-          </div>
-          <div class="form-group">
-            <label for="YearDigits">YearDigits</label>
-            <input type="number" class="form-control" name="YearDigits" id="YearDigits" placeholder="eg. 99 in 1999" required min="0"
+            </div>
+            <div class="form-group">
+              <label for="YearDigits">YearDigits</label>
+              <input type="number" class="form-control" name="YearDigits" id="YearDigits" placeholder="eg. 99 in 1999" required min="0"
               max="99"
               >
-          </div>
-          <div class="form-group">
-            <label for="Month">Month</label>
-            <input type="number" class="form-control" name="Month" id="Month" placeholder="eg. 4 for April" required min="1"
+            </div>
+            <div class="form-group">
+              <label for="Month">Month</label>
+              <input type="number" class="form-control" name="Month" id="Month" placeholder="eg. 4 for April" required min="1"
               max="12"
               >
-          </div>
+            </div>
             <div class="form-group">
               <label for="Day">Day</label>
               <input type="number" class="form-control" name="Day" id="Day" placeholder="eg. 12th of April" required min="1" max="31"
@@ -80,9 +79,9 @@
             <div class="form-check form-check-inline">
               <label class="form-check-label" for="female">Female</label>
               <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
-              <br>
-              <button id="button-submit" type="submit" class="button button-primary mb-2" onclick="findName()">Get Akan Name</button>
-              <button id="button-reset" type="reset" class="button button-primary mb-2" onclick="reset()">Reset</button>
+            </div>
+              <button  type="submit" class="button button-primary mb-2" onclick="findName()">Get Akan Name</button>
+              <button  type="reset" class="button button-primary mb-2" onclick="reset()">Reset</button>
               <p id="Results"></p>
             </div>
           </form>
