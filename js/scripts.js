@@ -1,80 +1,27 @@
-var century, year, month, day, dayValue,gender;//Get input from user
-var maleNames=["Kwasi:Sunday","Kwadwo:Monday", "Kwabena:Tuesday" ,"Kwaku:Wednesday","Yaw:Thursday","Friday:Kofi","Saturday:Kwame"];
-var femaleNames=["Sunday:Akosua","Monday:Adwoa:","Tuesday:Abenaa","Wednesday:Akua","Thursday:Yaa","Friday:Afua"];
+var century, year, month, day, dayValue,gender;
+var maleNames=["Kwasi","Kwadwo", "Kwabena" ,"Kwaku","Yaw","Kofi","Kwame"];
+var femaleNames=["Akosua","Adwoa:","Abenaa","Akua","Yaa","Afua"];
 var dayNames = ["Sunday","Monday","Tuesday","Wednesday", "Thursday", "Friday","Saturday" ];
-function inputFromUser() {
-century= parseInt(document.getElementById("CenturyDigits").value);
-year= parseInt(document.getElementById("YearDigits").value);
-month= parseInt(document.getElementById("Month").value);
-day = parseInt(document.getElementById("Day").value);
+var century= parseInt(document.getElementById("CenturyDigits"));
+var year= parseInt(document.getElementById("YearDigits"));
+var month= parseInt(document.getElementById("Month"));
+var day = parseInt(document.getElementById("Day"));
+var gender=document.getElementsByName("gender");
+var getDayValue =function(century,year,month,day){
+  return (Math.floor(((century/4)-2*century-1)+((5*year/4))+((26*(month+1)/10))+day)%7);
+  if (getDayValue < 0) {
+      getDayValue = getDayValue * -1;
+    }
+    else if (getDayValue > 0) {
+      return getDayValue
+    }
+
+};
+function getAkanName() {
+if(document.getElementById("male").checked== true){
+  document.getElementById("Results").innerHTML="You were born on "+dayNames[getDayValue(century,year,month,day)] + " and Your akan name is  " +maleNames[getDayValue(century,year,month,day)];
 }
-function getDayValue (){
-  inputFromUser();
-  d=(((century/4)-2*century-1)+((5*year/4))+((26*(month+1)/10))+day)%7;
-  console.log(d);
-  return (Math.floor(d));
+else if  (document.getElementById("female").checked== true) {
+  document.getElementById("Results").innerHTML="You were born on "+dayNames[getDayValue(century,year,month,day)] + " and Your akan name is  " +femaleNames[getDayValue(century,year,month,day)];
 }
-function getGender(){
-  var gender = document.getElementsByName("gender");
-  if(gender[0].checked == true){
-    var gender = "male";}
-  else (gender[1].checked == true)
-    var gender = "female";
-  }
-  switch(gender){
-    case gender="male":
-      switch(dayValue){
-        case(0):
-        document.getElementById("Results").innerHTML="You were born on " +dayNames[0] + " and Your akan name is " +maleNames[0];
-        break;
-        case(1):
-        document.getElementById("Results").innerHTML="You were born on "+dayNames[1] + " and Your akan name is " +maleNames[1];
-        break;
-        case (2):
-        document.getElementById("Results").innerHTML="You were born on " +dayNames[2]+ " and Your akan name is " +maleNames[2];
-        break;
-        case(3):
-        document.getElementById("Results").innerHTML="You were born on "+dayNames[3] +  " and Your akan name is " +maleNames[3];
-        break;
-        case(4):
-        document.getElementById("Results").innerHTML="You were born on "+dayNames[4] +  " and Your akan name is " +maleNames[4];
-        break;
-        case(5):
-        document.getElementById("Results").innerHTML="You were born on "+dayNames[5] +  " and Your akan name is " +maleNames[5];
-        break;
-        case(6):
-        document.getElementById("Results").innerHTML="You were born on "+dayNames[6] + " and Your akan name is " +maleNames[6];
-        break;
-      }
-      break;
-      case gender= "female":
-      switch (dayValue ){
-        case(0):
-        document.getElementById("Results").innerHTML="You were born on "+dayNames[0] + " and Your akan name is  " +femaleNames[0];
-        break;
-        case(1):
-        document.getElementById("Results").innerHTML="You were born on " +dayNames[1] + " and Your akan name is " +femaleNames[1];
-        break;
-        case(2):
-        document.getElementById("Results").innerHTML="You were born on " +dayNames[2] + " and Your akan name is " +femaleNames[2];
-        break;
-        case(3):
-        document.getElementById("Results").innerHTML="You were born on " +dayNames[3] + " and Your akan name is " +femaleNames[3];
-        break;
-        case(4):
-        document.getElementById("Results").innerHTML="You were born on " +dayNames[4] + " and Your akan name is " +femaleNames[4];
-        break;
-        case(5):
-        document.getElementById("Results").innerHTML="You were born on " +dayNames[5] + " and Your akan name is " + femaleNames[5];
-        break;
-        case(6):
-        document.getElementById("Results").innerHTMl="You were born on " +dayNames[6] + " and Your akan name is " +femaleNames[6];
-        break;
-      }
-      break
-      default:
-  }
-function findName(){
-  dayValue= getDayValue();
-  getGender();
 }
