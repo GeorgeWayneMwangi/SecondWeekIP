@@ -17,7 +17,7 @@ var getDayValue =function(century,year,month,day){
     }
 
 };
-function getAkanName() {
+function getAkanName() {event.preventDefault();
 if(document.getElementById("male").checked== true){
   document.getElementById("Results").innerHTML="You were born on "+dayNames[getDayValue(century,year,month,day)] + " and Your akan name is  " +maleNames[getDayValue(century,year,month,day)];
 }
